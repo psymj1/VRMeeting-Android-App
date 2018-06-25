@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:divider="@drawable/seperator_line"
+    android:showDividers="middle"
+    tools:context="hexcore.vrgui.SecurityQuestions"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/btnComplete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressFinish"
+        android:text="FINISH"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/lblSecTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="8dp"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:text="SECURITY QUESTIONS"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressCancel"
+        android:text="cancel"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spin1"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="60dp"
+        android:nextFocusDown="@id/txtAns1"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSecTitle" />
+
+    <Spinner
+        android:id="@+id/spin3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="32dp"
+        android:nextFocusDown="@id/txtAns3"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAns2" />
+
+    <Spinner
+        android:id="@+id/spin2"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="32dp"
+        android:nextFocusForward="@id/txtAns2"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAns1" />
+
+    <EditText
+        android:id="@+id/txtAns1"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Answer"
+        android:nextFocusDown="@id/spin2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin1" />
+
+    <EditText
+        android:id="@+id/txtAns3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin3" />
+
+    <EditText
+        android:id="@+id/txtAns2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Answer"
+        android:nextFocusDown="@id/spin3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spin2" />
+
+
+</android.support.constraint.ConstraintLayout>

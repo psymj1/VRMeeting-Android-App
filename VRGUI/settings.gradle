@@ -1,0 +1,1 @@
+include ':app', ':gvr-keyboard', ':gvr-keyboardsupport-release', ':gvr-permissionsupport-release', ':gvr', ':unitygvr', ':VRMeeting-Unity-debug', ':audiotransformer-debug'

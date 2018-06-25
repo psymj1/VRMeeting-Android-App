@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="hexcore.vrgui.LoginScreen"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressNavigateSettings"
+        android:text="Settings"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCreAccount"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressCreate"
+        android:text="Create Account"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/lblHaveLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNewUser" />
+
+    <TextView
+        android:id="@+id/lblHaveLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:text="Already have an account?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmailCheck"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmailCheck"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/txtEmailCheck"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreAccount" />
+
+    <EditText
+        android:id="@+id/txtEmailCheck"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLength="50"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPassCre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblHaveLogin" />
+
+    <EditText
+        android:id="@+id/txtPassCre"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLength="40"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/swRemember"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailCheck" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:baselineAligned="false"
+        android:onClick="onPressLogin"
+        android:text="Login"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/lblForgotPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swRemember" />
+
+    <TextView
+        android:id="@+id/lblForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:onClick="onForgotPassword"
+        android:singleLine="false"
+        android:text="Forgot Password?"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/lblNewUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/lblNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="New User?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreAccount"
+        app:layout_constraintEnd_toEndOf="@+id/btnCreAccount"
+        app:layout_constraintStart_toStartOf="@+id/btnCreAccount"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <Switch
+        android:id="@+id/swRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Remember Me?   "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassCre" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:editable="false"
+        android:fontFamily="@font/michroma"
+        android:hapticFeedbackEnabled="false"
+        android:text="VR MEETING"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/imgLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

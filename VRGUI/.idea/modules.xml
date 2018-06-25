@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VRGUI.iml" filepath="$PROJECT_DIR$/VRGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VRMeeting-Unity-debug/VRMeeting-Unity-debug.iml" filepath="$PROJECT_DIR$/VRMeeting-Unity-debug/VRMeeting-Unity-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiotransformer-debug/audiotransformer-debug.iml" filepath="$PROJECT_DIR$/audiotransformer-debug/audiotransformer-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr/gvr.iml" filepath="$PROJECT_DIR$/gvr/gvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr-keyboard/gvr-keyboard.iml" filepath="$PROJECT_DIR$/gvr-keyboard/gvr-keyboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr-keyboardsupport-release/gvr-keyboardsupport-release.iml" filepath="$PROJECT_DIR$/gvr-keyboardsupport-release/gvr-keyboardsupport-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr-permissionsupport-release/gvr-permissionsupport-release.iml" filepath="$PROJECT_DIR$/gvr-permissionsupport-release/gvr-permissionsupport-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unitygvr/unitygvr.iml" filepath="$PROJECT_DIR$/unitygvr/unitygvr.iml" />
+    </modules>
+  </component>
+</project>

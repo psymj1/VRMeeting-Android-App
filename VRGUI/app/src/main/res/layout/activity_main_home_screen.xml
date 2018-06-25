@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="hexcore.vrgui.MainHomeScreen"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/lblMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:editable="true"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:singleLine="false"
+        android:soundEffectsEnabled="false"
+        android:text="MAIN MENU"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imgLogo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnJoinMeeting"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressJoin"
+        android:text="Join a Meeting"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateMeeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingCode" />
+
+    <Button
+        android:id="@+id/btnSavedContact"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:onClick="onPressSavedContacts"
+        android:text="Saved Contacts"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateMeeting" />
+
+    <Button
+        android:id="@+id/btnCreateMeeting"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:onClick="onPressCreate"
+        android:text="Create a Meeting"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/btnSavedContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnJoinMeeting" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressLogout"
+        android:text="Logout"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSavedContact" />
+
+    <EditText
+        android:id="@+id/txtMeetingCode"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="ENTER UNIQUE CODE HERE"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnJoinMeeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo2" />
+
+    <ImageView
+        android:id="@+id/imgLogo2"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="31dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/txtMeetingCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMain" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="hexcore.vrgui.CreateMeeting"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/titleCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:enabled="false"
+        android:gravity="center_horizontal"
+        android:singleLine="false"
+        android:soundEffectsEnabled="false"
+        android:text="CREATE MEETING"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtMeetingName"
+        app:layout_constraintEnd_toEndOf="@+id/txtMeetingName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtMeetingName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Meeting Name"
+        android:maxLength="25"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtMeetingDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCreate"></EditText>
+
+    <EditText
+        android:id="@+id/txtMeetingDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Meeting Description"
+        android:maxLength="240"
+        app:layout_constraintBottom_toTopOf="@+id/btnUploadFile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingName">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btnUploadFile"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="37dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginStart="55dp"
+        android:background="@drawable/button_shape"
+        android:onClick="onPressUpload"
+        android:text="Select Optional Slides... "
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtMaxRoom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingDesc">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnComplete"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressFinish"
+        android:text="Next"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelCreate"
+        app:layout_constraintTop_toBottomOf="@+id/txtMaxRoom">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnCancelCreate"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="onPressCancel"
+        android:text="CANCEL"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/btnComplete"
+        app:layout_constraintEnd_toStartOf="@+id/btnComplete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnComplete">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/txtMaxRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:layout_marginStart="26dp"
+        android:text="(Please note, maximum room size is 12 people)"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnComplete"
+        app:layout_constraintStart_toStartOf="@+id/btnCancelCreate"
+        app:layout_constraintTop_toBottomOf="@+id/btnUploadFile"></TextView>
+
+
+</android.support.constraint.ConstraintLayout>
